@@ -1,0 +1,28 @@
+{
+  "name": "flatten-kata",
+  "version": "1.0.0",
+  "description": "Repository for TDD-ing the simple `flatten` utility function.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape src/flatten.test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Killavus/flatten-kata.git"
+  },
+  "keywords": [
+    "flatten",
+    "tdd",
+    "kata"
+  ],
+  "author": "Marcin Grzywaczewski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Killavus/flatten-kata/issues"
+  },
+  "homepage": "https://github.com/Killavus/flatten-kata#readme",
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  }
+}
