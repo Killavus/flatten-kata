@@ -1,5 +1,5 @@
 function flatten(source) {
-  return [];
+  return source;
 }
 
 module.exports = flatten;
