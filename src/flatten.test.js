@@ -16,3 +16,24 @@ test('flattening a flat array results in the same array', function(testCase) {
   const expectedResult = [1, 2, 3];
   testCase.deepEqual(flatten(input), expectedResult);
 });
+
+test('shallowly nested arrays are flattened', function(testCase) {
+  const inputs = [
+    [1, [2, 3, 4], 5, [6], [7, 8], 9],
+    [[1, 2, 3, 4, 5, 6, 7, 8, 9]],
+    [[], 1, 2, 3, 4, 5, 6, 7],
+    [[], [], [], [], []],
+  ];
+  testCase.plan(inputs.length);
+
+  const expectedResults = [
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7],
+    []
+  ];
+
+  inputs.forEach(function(input, index) {
+    testCase.deepEqual(flatten(input), expectedResults[index]);
+  });
+});
